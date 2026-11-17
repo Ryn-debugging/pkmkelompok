@@ -1,4 +1,4 @@
-﻿## File ini berisi opsi yang dapat di ubah untuk mengkustomisasi game mu.
+## File ini berisi opsi yang dapat di ubah untuk mengkustomisasi game mu.
 ##
 ## Baris yang di awali dengan dua 'tanda '#' adalah komentar, dan kamu tidak
 ## seharusnya menghapus nya. Baris dengan satu '#' adalah kode yang di
@@ -12,7 +12,7 @@
 ##
 ## Tanda _() yang mengelilingi string menandai itu dapat di terjemahkan.
 
-define config.name = _("prototipe game untuk pkm")
+define config.name = _("Matahari di Kertas Gambar")
 
 
 ## Meng determinasikan apakah judul yang di berikan di atas di tampilkan di menu
@@ -23,21 +23,26 @@ define gui.show_name = True
 
 ## Versi Permainan.
 
-define config.version = "1.0"
+define config.version = "2.0"
 
 
 ## Teks yang ditempatkan pada layar tentang game. Tempatkan teks di antara tanda
 ## kutip tiga, dan biarkan baris kosong di antara paragraf.
 
 define gui.about = _p("""
-""")
+    {b}Matahari di Kertas Gambar{/b} adalah visual novel edukasi interaktif untuk siswa SD/MI yang mengangkat isu perundungan (bullying) dari sudut pandang saksi mata ({i}bystander{/i}).
+
+    Melalui kisah Rara, Kenzie, Danisa, dan Pak Joko, pemain diajak memahami bahwa keberanian yang lembut, empati, serta strategi intervensi {b}5D{/b} ({i}Direct, Distract, Delegate, Delay, Document{/i}) dapat melindungi teman sekaligus memutus rantai perundungan tanpa membalas dengan kekerasan.
+
+    {b}Fitur Utama:{/b} alur cerita bercabang 5 babak dengan indikator Keberanian, Empati, dan Kepercayaan; 4 Ending berbeda (Bad, Normal, Good, dan True Ending); Pojok Edukasi Anti-Perundungan; Galeri Ending; serta Kuis Refleksi Interaktif.
+    """)
 
 
 ## Nama pendek permainan yang di gunakan untuk executable dan direktori di
 ## bangunan distribusi. Ini harus hanya berisi karakter ASCII-saja, dan tidak
 ## boleh mengandung  spasi, koma, atau kutip.
 
-define build.name = "prototipegameuntukpkm"
+define build.name = "MatahariDiKertasGambar"
 
 
 ## Suara dan musik #############################################################
@@ -63,7 +68,7 @@ define config.has_voice = True
 ## dimainkan sampai permainan di mulai, sampai di hentikan atau file lain di
 ## mainkan.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/happy.mp3"
 
 
 ## Transisi ####################################################################

@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 ## Inisialisasi
 ################################################################################
 
@@ -310,6 +310,10 @@ screen navigation():
 
         textbutton _("Muat") action ShowMenu("load")
 
+        textbutton _("Pojok Edukasi") action ShowMenu("pojok_edukasi")
+
+        textbutton _("Galeri Ending") action ShowMenu("galeri_ending")
+
         textbutton _("Setting") action ShowMenu("preferences")
 
         if _in_replay:
@@ -367,15 +371,33 @@ screen main_menu():
     use navigation
 
     if gui.show_name:
+        $ _jml_ending = sum(1 for _f in [persistent.ending_bad, persistent.ending_normal, persistent.ending_good, persistent.ending_true] if _f)
 
-        vbox:
-            style "main_menu_vbox"
+        frame:
+            background Solid("#0f172ad9")
+            padding (36, 24)
+            xalign 1.0
+            xoffset -36
+            yalign 1.0
+            yoffset -36
 
-            text "[config.name!t]":
-                style "main_menu_title"
+            vbox:
+                style "main_menu_vbox"
+                spacing 6
 
-            text "[config.version]":
-                style "main_menu_version"
+                text "[config.name!t]":
+                    style "main_menu_title"
+
+                text _("Visual Novel Edukasi Anti-Perundungan (SD/MI)"):
+                    color "#7dd3fc"
+                    size 28
+                    xalign 1.0
+                    text_align 1.0
+
+                text _("Versi [config.version]  |  Ending Terbuka: [_jml_ending]/4"):
+                    style "main_menu_version"
+                    color "#cbd5e1"
+                    size 22
 
 
 style main_menu_frame is empty
@@ -391,20 +413,20 @@ style main_menu_frame:
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
-    xalign 1.0
-    xoffset -30
-    xmaximum 1200
-    yalign 1.0
-    yoffset -30
+    xmaximum 1100
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
 
 style main_menu_title:
     properties gui.text_properties("title")
+    xalign 1.0
+    textalign 1.0
 
 style main_menu_version:
     properties gui.text_properties("version")
+    xalign 1.0
+    textalign 1.0
 
 
 ## layar Menu Permainan ########################################################

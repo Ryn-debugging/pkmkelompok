@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 ## Inisialisasi
 ################################################################################
 
@@ -26,17 +26,17 @@ define config.check_conflicting_properties = True
 ## Warna text pada antarmuka.
 
 ## Warna aksen yang digunakan sepanjang interface sampai pewarnaan text.
-define gui.accent_color = '#0099cc'
+define gui.accent_color = '#38bdf8'
 
 ## Warna yang di gunakan untuk warna tombol text jika di pilih atau di tekan.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#cbd5e1'
 
 ## Warna kecil yang di gunakan untuk text kecil, yang membutuhkan lebih terang/
 ## lebih gelap untuk mencapai efek yang sama
-define gui.idle_small_color = '#aaaaaa'
+define gui.idle_small_color = '#cbd5e1'
 
 ## Warna yang di gunakan untuk tombol dan bar yang di pilih.
-define gui.hover_color = '#66c1e0'
+define gui.hover_color = '#7dd3fc'
 
 ## Warna yang digunakan untuk text tombol ketika di pijit tapi tidak di fokus.
 ## Tombol di pilih jika terdapat di layar saat ini atau value preferensi.
@@ -83,14 +83,14 @@ define gui.label_text_size = 36
 define gui.notify_text_size = 24
 
 ## Ukuran judul permainan.
-define gui.title_text_size = 75
+define gui.title_text_size = 64
 
 
 ## Menu utama dan Menu permainan. ##############################################
 
 ## Gambar yang di gunakan untuk Menu utama dan Menu permainan.
-define gui.main_menu_background = "gui/main_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
+define gui.main_menu_background = "images/background/halaman_sekolah.png"
+define gui.game_menu_background = "images/background/taman.png"
 
 
 ## Dialog ######################################################################
@@ -204,14 +204,14 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ##
 ## Choice buttons are used in the in-game menus.
 
-define gui.choice_button_width = 1185
+define gui.choice_button_width = 1320
 define gui.choice_button_height = None
 define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(150, 8, 150, 8)
+define gui.choice_button_borders = Borders(100, 10, 100, 10)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#888888'
+define gui.choice_button_text_idle_color = '#e2e8f0'
 define gui.choice_button_text_hover_color = "#ffffff"
 define gui.choice_button_text_insensitive_color = '#8888887f'
 
@@ -451,7 +451,7 @@ init python:
         gui.choice_button_width = 1860
         gui.choice_button_text_size = 45
 
-        gui.navigation_spacing = 30
+        gui.navigation_spacing = 10
         gui.pref_button_spacing = 15
 
         gui.history_height = 285
